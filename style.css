@@ -1,0 +1,362 @@
+
+@font-face {
+    font-family: GeneralSans-medium;
+    src: url("./Fonts/GeneralSans-Medium.otf");
+}
+
+@font-face {
+    font-family: GeneralSans-regular;
+    src: url("./Fonts/GeneralSans-Regular.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: GeneralSans-regular;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    position: relative;
+}
+
+.primary-btn::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 0%;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.primary-btn:hover::after{
+    width: 100%;
+}
+
+#cursor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    color: #000;
+    background-color: #fff;
+    z-index: 999;
+    pointer-events: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
+    mix-blend-mode: difference;
+    font-family: GeneralSans-medium;
+    font-weight: 500;
+}
+
+#main{
+    padding-bottom: 0.2rem;
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+
+#hero{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar{
+    justify-content: space-between;
+    padding: 3vw 0 3vw 3vw;
+}
+
+.navbar > h3{
+    font-family: GeneralSans-medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.headings{
+    margin-top: 10vh;
+    padding: 0 3vw;
+    width: fit-content;
+}
+
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.headings > .heading1 > h1{
+    font-size: 11vw;
+    line-height: 9.5vw;
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding: 0;
+    transform: translateY(100%);
+}
+
+.boundings{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bounding > h1{
+    font-size: 11vw;
+    line-height: 9.5vw;
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding-left: 12vw;
+    transform: translateY(100%);
+}
+
+
+.bounding > h4{
+    font-style: 1vw;
+    font-family: GeneralSans-medium;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 1.5vh;
+    text-align: end;
+    transform: translateY(100%);
+}
+
+.small-headings{
+    margin-top: 10vh;
+}
+
+.small-headings > .bounding{
+    width: 100%;
+}
+
+.small-headings > .bounding > h4{
+    font-style: 1vw; 
+    font-family: GeneralSans-medium;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: end;
+    line-height: 4vh;
+}
+
+.ending-links{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2vw 3vw;
+    justify-content: space-between;
+}
+
+.ending-links > .primary-btn > i{
+    margin-left: 0;
+}
+
+.circle-icon{
+    gap: 0.5rem;
+}
+
+.icon1, .icon2{
+    height: 2rem;
+    width: 2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.icon1 > i , .icon2 > i{
+    transform: translateY(-100%);
+    height: 2rem;
+    width: 2rem;
+    padding-top: 0.5rem;
+    display: block;
+    color: #000;
+    font-size: 1rem;
+    font-family: GeneralSans-medium;
+    font-weight: 900;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5;
+}
+
+#page2{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+    padding: 15vw 10vw 0 2vw;
+}
+
+.elem{
+    width: 100%;
+    justify-content: space-between;
+    padding: 4vw 3vw;
+    border-top: 1px solid #777;
+    position: relative;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+.elem:nth-child(3){
+    border-bottom: 1px solid #777;
+}
+
+.elem > h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.elem > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    height: 140%;
+    opacity: 0;
+}
+
+#about{
+    position: relative;
+    width: 100%;
+    padding: 15vw 5vw;
+    background-color: #000;
+    padding-left: 20vw;
+    gap: 80px;
+}
+
+#about > img{
+    width: 20rem;
+}
+
+.image-para{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.image-para > h5{
+    color: #888;
+}
+
+.image-para > h4{
+    font-family: GeneralSans-regular;
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.image-para > a{
+    font-family: GeneralSans-medium;
+    font-weight: 500;
+    margin-top: 2vw;
+    padding: 0.5vw 2vw;
+    color: #fff;
+    border-radius: 50rem;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+.image-para > a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+#footer{
+    width: 100%;
+    background-color: #000;
+    padding: 2vw 3vw 2vw 3vw;
+}
+
+#footer-top{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+#footer-top > h5{
+    font-family: GeneralSans-regular;
+    font-weight: 400;
+    color: #888;
+}
+
+#footer-top > .primary-btn > i{
+    padding-left: 0.5vw;
+}
+
+#footer-bottom{
+    margin-top: 8rem;
+    justify-content: space-between;
+}
+
+#footer-bottom > .left{
+    gap: 3vw;
+}
+
+#footer-bottom > .left > p{
+    font-size: 0.9rem;
+}
+
+#footer-bottom > .right{
+    gap: 3vw;
+}
+
+#footer-bottom > .right > .primary-btn{
+    font-size: 0.9rem;
+}
+
+
+@media (max-width:1300px){
+    #page2{
+        min-height: fit-content;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width:1000px) {
+    #about{
+        flex-direction: column;
+    }
+    .image-para{
+        padding: 0;
+        width: 100%;
+    }
+    .image-para > h4{
+        width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .ending-links{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width:500px) {
+    html{
+        font-size: 75%;
+    }
+    #footer-bottom{
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
